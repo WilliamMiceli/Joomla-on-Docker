@@ -4,10 +4,6 @@ stages:
   - Build Base
   - Push Images
 
-variables:
-  DOCKER_HOST: tcp://docker:2375/
-  DOCKER_DRIVER: overlay2
-
 0-build-base:
   stage: Build Base
   artifacts:
