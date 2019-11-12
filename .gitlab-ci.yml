@@ -25,7 +25,7 @@ variables:
 1A-push-dev:
   stage: Push Images
   dependencies:
-    - build-image
+    - 0-build-base
   tags:
     - docker
   before_script:
@@ -38,7 +38,7 @@ variables:
 1B-push-version:
   stage: Push Images
   dependencies:
-    - build-image
+    - 0-build-base
   tags:
     - docker
   when: manual
@@ -52,7 +52,7 @@ variables:
 1C-push-latest:
   stage: Push Images
   dependencies:
-    - build-image
+    - 0-build-base
   tags:
     - docker
   when: manual
